@@ -15,4 +15,7 @@ interface GithubRepoInternalDao {
 
     @Query("select * from GithubRepo order by id")
     fun repos(): DataSource.Factory<Int, GithubRepo>
+
+    @Query("select count(*) from GithubRepo")
+    fun count(): Int
 }

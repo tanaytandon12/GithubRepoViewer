@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 interface IGithubRepoRepository {
 
-    suspend fun fetchRepos(page: Int, pageSize: Int): RepoResult<GithubRepoWrapper>
+    suspend fun fetchRepos(pageSize: Int): RepoResult<GithubRepoWrapper>
 
     fun repos(): DataSource.Factory<Int, GithubRepo>
 }
@@ -23,10 +23,11 @@ class GithubRepoRepository @Inject constructor(
 
     private var mLimitNotReached = true
 
-    override suspend fun fetchRepos(page: Int, pageSize: Int): RepoResult<GithubRepoWrapper> {
+    override suspend fun fetchRepos(pageSize: Int): RepoResult<GithubRepoWrapper> {
         return try {
             if (mLimitNotReached) {
-                val apiResponse = mGithubRepoAPI.repoList(page, pageSize)
+                val pageNo = (mGithubRepoDao.count()/ pageSize) + 1
+                val apiResponse = mGithubRepoAPI.repoList(pageNo, pageSize)
                 if (apiResponse is RepoResult.Success) {
                     mLimitNotReached =
                         apiResponse.data?.isNotEmpty() == true && pageSize == apiResponse.data.size
