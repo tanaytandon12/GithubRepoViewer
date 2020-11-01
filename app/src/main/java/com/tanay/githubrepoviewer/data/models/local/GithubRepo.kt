@@ -15,4 +15,6 @@ data class GithubRepo(
     val hasAdminPermission: Boolean = false,
     val hasPullPermission: Boolean = false,
     val hasPushPermission: Boolean = false
-)
+) {
+    fun licenseUrlExists() = licenseUrl?.isNotEmpty() == true
+}

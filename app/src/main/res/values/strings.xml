@@ -20,6 +20,9 @@
     <string name="issueCount">Open Issue count: %1$d</string>
     <string name="admin">Admin</string>
     <string name="pull">Pull</string>
+    <string name="fetchingData">Fetching Data</string>
     <string name="push">Push</string>
     <string name="permissions">Permissions</string>
+    <string name="na">NA</string>
+    <string name="allDataFetched">All data fetched</string>
 </resources>
