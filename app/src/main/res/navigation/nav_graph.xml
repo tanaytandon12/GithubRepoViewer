@@ -9,7 +9,7 @@
         android:id="@+id/repoListFragment"
         android:name="com.tanay.githubrepoviewer.ui.RepoListFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_repo_list">
 
     </fragment>
 </navigation>

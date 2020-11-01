@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tanay.githubrepoviewer">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".GithubRepoViewerApp"
         android:icon="@mipmap/ic_launcher"

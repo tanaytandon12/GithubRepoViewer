@@ -13,7 +13,7 @@ import dagger.Provides
     includes = [GithubRepoAPIModule::class, GithubRepoDbModule::class,
         RepositoryModule::class, UseCaseModule::class]
 )
-class AppModule(val application: Application) {
+class AppModule(private val application: Application) {
 
     @Provides
     @AppScope
