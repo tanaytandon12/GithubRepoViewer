@@ -3,4 +3,22 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+    <color name="red">#ff0000</color>
+    <color name="green">#00ff00</color>
+    <color name="black90">#24201D</color>
+    <color name="blue">#0000ff</color>
+    <color name="gray">#71767A</color>
+
+    <color name="repoCardBackgroundColor">@color/white</color>
+    <color name="noDataTextColor">@color/black</color>
+
+    <color name="primaryTextColor">@color/black</color>
+
+    <color name="hasPermissionTextColor">@color/green</color>
+    <color name="doesNotHavePermissionTextColor">@color/red</color>
+
+
 </resources>

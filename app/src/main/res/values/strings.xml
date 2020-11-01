@@ -11,5 +11,15 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
     <string name="networkError">Oops a network error occurred!!</string>
+    <string name="noData">No Data at the moment sorry!!</string>
 
+    <string name="repoName">Name: %1$s</string>
+    <string name="licenseName">License: %1$s</string>
+    <string name="description">Description: %1$s</string>
+    <string name="link">Link</string>
+    <string name="issueCount">Open Issue count: %1$d</string>
+    <string name="admin">Admin</string>
+    <string name="pull">Pull</string>
+    <string name="push">Push</string>
+    <string name="permissions">Permissions</string>
 </resources>

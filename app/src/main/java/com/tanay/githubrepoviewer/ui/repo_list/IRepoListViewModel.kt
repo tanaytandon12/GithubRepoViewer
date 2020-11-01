@@ -1,4 +1,4 @@
-package com.tanay.githubrepoviewer.ui
+package com.tanay.githubrepoviewer.ui.repo_list
 
 import androidx.lifecycle.*
 import androidx.paging.LivePagedListBuilder
@@ -87,7 +87,9 @@ class RepoListViewModel(
         ViewModelProvider.NewInstanceFactory() {
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {
             return if (modelClass.isAssignableFrom(RepoListViewModel::class.java)) {
-                RepoListViewModel(mIGithubRepoListUseCase) as T
+                RepoListViewModel(
+                    mIGithubRepoListUseCase
+                ) as T
             } else {
                 super.create(modelClass)
             }
