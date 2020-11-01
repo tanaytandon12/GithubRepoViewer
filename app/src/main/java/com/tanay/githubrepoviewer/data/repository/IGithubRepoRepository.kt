@@ -1,4 +1,4 @@
 package com.tanay.githubrepoviewer.data.repository
 
-interface IGithubRepoAPI {
+interface IGithubRepoRepository {
 }
