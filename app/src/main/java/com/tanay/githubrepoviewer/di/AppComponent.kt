@@ -12,6 +12,7 @@ import javax.inject.Scope
 @Component(
     modules = [AppModule::class]
 )
+@AppScope
 interface AppComponent {
 
     fun repoListComponent(module: GithubRepoModule): GithubRepoComponent

@@ -26,7 +26,7 @@ class GithubRepoRepository @Inject constructor(
     override suspend fun fetchRepos(pageSize: Int): RepoResult<GithubRepoWrapper> {
         return try {
             if (mLimitNotReached) {
-                val pageNo = (mGithubRepoDao.count()/ pageSize) + 1
+                val pageNo = (mGithubRepoDao.count() / pageSize) + 1
                 val apiResponse = mGithubRepoAPI.repoList(pageNo, pageSize)
                 if (apiResponse is RepoResult.Success) {
                     mLimitNotReached =
@@ -46,7 +46,7 @@ class GithubRepoRepository @Inject constructor(
                             )
                         })
                     }
-                    RepoResult.Success(GithubRepoWrapper(mLimitNotReached))
+                    RepoResult.Success(GithubRepoWrapper(!mLimitNotReached))
                 } else {
                     RepoResult.Failure(
                         errorMessage = (apiResponse as RepoResult.Failure).errorMessage,
